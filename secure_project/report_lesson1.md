@@ -1,8 +1,9 @@
-# Homework 1 Report: Sledopyt
+# Урок 1. Linux как среда обитания безопасного софта
 
-## Screenshot
+## Скриншот
 
-Add a screenshot from Bash/WSL terminal where the result of this command is visible:
+
+![alt text](image-1.png)
 
 ```bash
 tree ~/secure_project
@@ -31,7 +32,7 @@ tree ~/secure_project
 3 directories, 6 files
 ```
 
-## Command History
+## История команд
 
 ```text
   1  mkdir -p ~/secure_project/{docs,src,backup}
