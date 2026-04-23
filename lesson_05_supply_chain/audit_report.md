@@ -3,16 +3,16 @@
 ## Ссылка на GitHub
 
 ```text
-[вставь ссылку на репозиторий]
+[https://github.com/Larl12/Security_s2]
 ```
 
 ## Что было проверено
 
 Проект для аудита:
 
-```text
-lesson_04_face_control
-```
+
+![alt text](image.png)
+
 
 Итоговый `requirements.txt`:
 
@@ -26,13 +26,10 @@ pip-audit==2.9.0
 
 ## Скриншот 1. Найденная уязвимость
 
-Для демонстрации уязвимости временно добавь в `requirements.txt` строку:
 
-```text
-pyyaml==3.13
-```
+![alt text](image-3.png)
 
-После этого выполни:
+После этого выполните:
 
 ```bash
 cd ~/project/Security_s2/lesson_04_face_control
@@ -43,11 +40,9 @@ pip install pip-audit
 pip-audit -r requirements.txt
 ```
 
-Вставь сюда скриншот, где видно найденную уязвимость:
+уязвимость:
 
-```text
-[вставь скриншот с найденной уязвимостью]
-```
+![alt text](image-2.png)
 
 ## Исправление
 
@@ -61,7 +56,7 @@ python-dotenv==1.1.1
 pip-audit==2.9.0
 ```
 
-Установи зависимости заново и выполни аудит повторно:
+Установиливаем зависимости заново и выполните аудит повторно:
 
 ```bash
 pip install -r requirements.txt
@@ -69,16 +64,10 @@ pip-audit -r requirements.txt
 ```
 
 ## Скриншот 2. Чистый аудит
+![alt text](image-4.png)
 
-Вставь сюда скриншот, где видно успешный результат:
+![alt text](image-5.png)
 
-```text
-No known vulnerabilities found
-```
-
-```text
-[вставь скриншот чистого аудита]
-```
 
 ## Pre-commit
 

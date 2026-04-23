@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <main>
+        <h1>{{ title }}</h1>
+        <p>
+            {% if mode == "unsafe" %}
+            Vulnerable demo page. User input is rendered without protection.
+            {% else %}
+            Protected page. Allowed tags: b, i, u, em, strong.
+            {% endif %}
+        </p>
+
+        <form method="post" action="{{ post_url }}">
+            <label for="comment">Comment</label>
+            <textarea id="comment" name="comment" rows="5" cols="60" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+
+        <section>
+            <h2>Saved comments</h2>
+            {% if comments %}
+                <ul>
+                {% for comment in comments %}
+                    <li>
+                        {% if mode == "unsafe" %}
+                        {{ comment | safe }}
+                        {% else %}
+                        {{ comment | safe }}
+                        {% endif %}
+                    </li>
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p>No comments yet.</p>
+            {% endif %}
+        </section>
+    </main>
+</body>
+</html>
