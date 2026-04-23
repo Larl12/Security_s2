@@ -1,0 +1,12 @@
+/home/xrtp/secure_project
+├── backup
+│   └── secret_plan_v1.txt
+├── docs
+│   └── secret_plan.txt
+├── evidence.log
+├── history.txt
+├── report.txt
+├── report_lesson1.md
+└── src
+
+3 directories, 6 files
