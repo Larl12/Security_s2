@@ -1,0 +1,28 @@
+import re
+
+from pydantic import BaseModel, EmailStr, Field, field_validator, model_validator
+
+
+class UserCreate(BaseModel):
+    username: str = Field(min_length=4, max_length=20, pattern=r"^[A-Za-z0-9]+$")
+    email: EmailStr
+    password: str
+    confirm_password: str
+    age: int = Field(ge=18, le=100)
+
+    @field_validator("password")
+    @classmethod
+    def validate_password_strength(cls, value: str) -> str:
+        if not re.search(r"[A-Z]", value):
+            raise ValueError("Password must contain at least one uppercase letter")
+        if not re.search(r"\d", value):
+            raise ValueError("Password must contain at least one digit")
+        if not re.search(r"[!@#$%^&*]", value):
+            raise ValueError("Password must contain at least one special character (!@#$%^&*)")
+        return value
+
+    @model_validator(mode="after")
+    def validate_passwords_match(self) -> "UserCreate":
+        if self.password != self.confirm_password:
+            raise ValueError("Passwords do not match")
+        return self
