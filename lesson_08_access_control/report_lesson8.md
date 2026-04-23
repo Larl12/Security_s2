@@ -2,9 +2,7 @@
 
 ## Ссылка на GitHub
 
-```text
-[вставь ссылку на репозиторий]
-```
+https://github.com/Larl12/Security_s2
 
 ## Что реализовано
 
@@ -79,10 +77,7 @@ source venv/bin/activate
 pytest -v
 ```
 
-## Что приложить
-
-- файл `test_security.py`
-- скриншот терминала с успешным запуском `pytest -v`
+![alt text](image.png)
 
 ## Деплой на сервер
 
@@ -93,10 +88,4 @@ python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 uvicorn src.main:app --host 0.0.0.0 --port 8000
-```
-
-## Коммит
-
-```text
-Task 8 ready.
 ```
