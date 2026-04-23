@@ -2,9 +2,7 @@
 
 ## Ссылка на GitHub
 
-```text
-[вставь ссылку на репозиторий]
-```
+https://github.com/Larl12/Security_s2
 
 ## Структура проекта
 
@@ -45,8 +43,6 @@ pip install -r requirements.txt
 uvicorn src.main:app --reload
 ```
 
-## Что показать в отчете
-
 ### 1. Скриншот успешной XSS-атаки до защиты
 
 Открой:
@@ -63,9 +59,8 @@ http://127.0.0.1:8000/comments/unsafe
 
 Вставь сюда скриншот с `alert()`:
 
-```text
-[вставь скриншот атаки]
-```
+![alt text](image-1.png)
+
 
 ### 2. Скриншот заголовков ответа с CSP
 
@@ -75,7 +70,8 @@ http://127.0.0.1:8000/comments/unsafe
 http://127.0.0.1:8000/comments
 ```
 
-Во вкладке `Network` покажи заголовок:
+
+Во вкладке `Network` :
 
 ```text
 Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'
@@ -83,9 +79,7 @@ Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'
 
 Вставь сюда скриншот:
 
-```text
-[вставь скриншот заголовков ответа]
-```
+![alt text](image-2.png)
 
 ### 3. Скриншот заблокированной атаки
 
@@ -103,9 +97,8 @@ Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'
 
 Вставь сюда скриншот консоли:
 
-```text
-[вставь скриншот Console]
-```
+![alt text](image-3.png)
+![alt text](image-4.png)
 
 ## Деплой на сервер
 
@@ -118,8 +111,4 @@ pip install -r requirements.txt
 uvicorn src.main:app --host 0.0.0.0 --port 8000
 ```
 
-## Коммит
 
-```text
-Task 6 ready.
-```
